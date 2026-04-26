@@ -57,3 +57,9 @@ python3 -m http.server 8080
 - `assets/` — logo, immagini, CSS  
 
 Il file `.nojekyll` evita che GitHub tratti il sito con Jekyll (file/cartelle con `_`).
+
+### Domini, `CNAME` e record TXT
+
+- Il file **`CNAME`** in root (contenuto: `scuoleeguida.com`) è quello che GitHub Pages legge: va tenuto in repo e deve coincidere con *Settings → Pages → Custom domain* (senza `www` se usi l’apex come nel file).
+- I record **DNS** (A per l’apex, oppure CNAME per `www`, eventuale **TXT** per verifica posta/SSL) si configurano **solo dal registrar / DNS** — non vanno inseriti come pagine del sito. Il sito statico li “vede” già se il dominio punta a GitHub.
+- Nelle HTML ci sono i **`rel="canonical"`** con `https://scuoleeguida.com/...` più `robots.txt` e `sitemap.xml` per motore di ricerca e condivisione.
