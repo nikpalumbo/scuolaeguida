@@ -1,0 +1,69 @@
+/* Variante B — “Notturno”: testo centrale, gradiente dal basso, atmosfera cinema */
+
+.land--b .land-hero {
+  align-items: center;
+  justify-content: center;
+  min-height: min(92vh, 50rem);
+}
+
+.land--b .land-hero__bg img {
+  filter: brightness(0.78) contrast(1.08) saturate(0.92);
+}
+
+.land--b .land-hero__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(2, 8, 24, 0.38) 45%,
+    rgba(2, 8, 24, 0.28) 100%
+  );
+}
+
+.land--b .land-hero__content {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.land--b .land-hero h1,
+.land--b .land-hero p.lead,
+.land--b .land-hero__kicker,
+.land--b .land-hero__tag,
+.land--b .land-hero__actions,
+.land--b .land-hero__vote {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.land--b .land-hero h1 {
+  max-width: 22ch;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  letter-spacing: -0.02em;
+  text-shadow: 0 3px 28px rgba(0, 0, 0, 0.55);
+}
+
+.land--b .land-hero p.lead {
+  max-width: 40rem;
+  font-size: 1.02rem;
+}
+
+.land--b .land-hero__kicker {
+  color: #e8b86a;
+  letter-spacing: 0.2em;
+}
+
+.land--b .land-hero__actions {
+  justify-content: center;
+}
+
+.land--b a.land-cta--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.land--b a.land-cta--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+}

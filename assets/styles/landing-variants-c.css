@@ -1,0 +1,89 @@
+/* Variante C — “Doppia luce”: testo su blu pieno, foto a destra (desktop) */
+
+.land--c .land-hero.land-hero--split {
+  position: relative;
+  display: grid;
+  min-height: min(88vh, 48rem);
+  grid-template-columns: minmax(18rem, 1fr) minmax(0, 1.18fr);
+  align-items: stretch;
+}
+
+.land--c .land-hero--split__text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem) 2.5rem;
+  max-width: none;
+  margin: 0;
+  background: linear-gradient(160deg, var(--brand-blue) 0%, #041830 100%);
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.land--c .land-hero--split__text .land-hero__kicker {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.land--c .land-hero--split__text h1,
+.land--c .land-hero--split__text p.lead,
+.land--c .land-hero--split__text .land-hero__tag {
+  color: #fff;
+  text-shadow: none;
+}
+
+.land--c .land-hero--split__text p.lead {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 38ch;
+}
+
+.land--c .land-hero--split__text .land-hero__actions {
+  margin-top: 0.25rem;
+}
+
+.land--c .land-hero--split__text .land-hero__vote {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.land--c .land-hero--split__pic {
+  position: relative;
+  min-height: 18rem;
+  overflow: hidden;
+}
+
+.land--c .land-hero--split__pic .land-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.land--c .land-hero--split__pic .land-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: brightness(0.88) contrast(1.05) saturate(1.05);
+  display: block;
+}
+
+.land--c .land-hero--split__pic .land-hero__overlay {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 880px) {
+  .land--c .land-hero.land-hero--split {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .land--c .land-hero--split__pic {
+    order: -1;
+    min-height: 42vh;
+  }
+  .land--c .land-hero--split__text {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

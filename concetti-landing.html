@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confronta le home — Nicola Gison | Melito</title>
+    <link rel="stylesheet" href="/assets/styles/brand.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        color: #222;
+        background: #eef1f5;
+      }
+      .wrap {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+      h1 {
+        font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+        margin: 0 0 0.4rem;
+        color: var(--brand-blue, #0a3a7a);
+      }
+      p.intro {
+        color: #4a4a4a;
+        margin: 0 0 1.75rem;
+        max-width: 40rem;
+      }
+      p.back {
+        margin: 0 0 1.5rem;
+        font-size: 0.9rem;
+      }
+      p.back a {
+        color: var(--brand-blue-mid, #13509e);
+        font-weight: 600;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #d8e0ec;
+        border-radius: 12px;
+        padding: 1.2rem 1.15rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 20px rgba(10, 58, 120, 0.07);
+      }
+      .card .label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #7a7a7a;
+        margin-bottom: 0.25rem;
+      }
+      .card h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.4rem;
+        color: #1a1a1a;
+      }
+      .card p {
+        font-size: 0.88rem;
+        color: #555;
+        margin: 0 0 0.9rem;
+        flex: 1;
+      }
+      .card a.open {
+        display: inline-block;
+        align-self: flex-start;
+        background: var(--brand-blue, #0a3a7a);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.82rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 8px;
+      }
+      .card a.open:hover {
+        background: var(--brand-blue-mid, #13509e);
+      }
+      .card--default a.open {
+        background: #1a1a1a;
+      }
+      .card--default a.open:hover {
+        background: #333;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #d8e0ec;
+      }
+      footer a {
+        color: var(--brand-blue-mid, #13509e);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="italy-stripe" role="presentation" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="back"><a href="/">← Torna alla home</a></p>
+      <h1>Varianti di home (landing)</h1>
+      <p class="intro">
+        Stessi testi, tre interfacce diverse. Apri una alla volta, confronta, poi si può fissare una versione
+        “ufficiale” in <code>index.html</code>.
+      </p>
+      <div class="grid">
+        <article class="card card--default">
+          <span class="label">Definita</span>
+          <h2>Principale</h2>
+          <p>Hero a tutta larghezza, testo a sinistra, foto smorzata e velo scuro per leggere bene.</p>
+          <a class="open" href="/">Apri <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card">
+          <span class="label">Bozza B</span>
+          <h2>Notturno</h2>
+          <p>Immagine ancora più scura, testo centrale, accento “oro” sul kicker, vibrazione da manifesto / cinema.</p>
+          <a class="open" href="/landing-b.html">Apri <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card">
+          <span class="label">Bozza C</span>
+          <h2>Doppia luce</h2>
+          <p>Blu pieno a sinistra con il messaggio, foto a destra (sopra al testo su schermo stretto). Ordine chiaro, istituzionale.</p>
+          <a class="open" href="/landing-c.html">Apri <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <footer>
+        Altre prove di pagina (non landing): <a href="/bozze.html">classico, moderno, comunità</a>
+      </footer>
+    </div>
+  </body>
+</html>

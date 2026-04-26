@@ -1,0 +1,186 @@
+/* Pagina educazione: leggibile, allineata al blu campagna (brand.css) */
+:root {
+  --edu-text: #1a1a1a;
+  --edu-muted: #4a4a4a;
+  --edu-line: #e0e0e0;
+  --edu-bg: #f8f7f4;
+  --edu-accent: var(--brand-blue, #0a3a7a);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--edu-text);
+  background: var(--edu-bg);
+  line-height: 1.6;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid var(--edu-accent);
+}
+
+.educ-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.educ-top {
+  background: #fff;
+  border-bottom: 1px solid var(--edu-line);
+  padding: 0.75rem 1.25rem;
+}
+
+.educ-top-inner {
+  max-width: 45rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.back-link {
+  color: var(--edu-accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.educ-main {
+  flex: 1;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  width: 100%;
+}
+
+.educ-hero {
+  margin-bottom: 2rem;
+}
+
+.educ-hero h1 {
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.educ-hero p.lead {
+  color: var(--edu-muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.melito-strip {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.melito-strip figure {
+  margin: 0;
+  flex: 1 1 200px;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--edu-line);
+  background: #e8e8e4;
+  display: flex;
+  flex-direction: column;
+}
+
+.melito-strip .strip-img-wrap {
+  position: relative;
+  height: clamp(120px, 22vw, 180px);
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.melito-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.melito-strip .label {
+  display: block;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  color: var(--edu-muted);
+  padding: 0.35rem 0.5rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid var(--edu-line);
+}
+
+.educ-section {
+  margin-bottom: 2rem;
+}
+
+.educ-section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  color: #0a0a0a;
+}
+
+.educ-section p {
+  margin: 0 0 0.85rem;
+}
+
+.educ-list {
+  margin: 0.5rem 0 0 1.1rem;
+  padding: 0;
+}
+
+.educ-list li {
+  margin-bottom: 0.5rem;
+}
+
+.card-tip {
+  background: #fff;
+  border: 1px solid var(--edu-line);
+  border-left: 4px solid var(--edu-accent);
+  padding: 1rem 1.1rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1rem 0;
+}
+
+.card-tip strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--edu-accent);
+}
+
+footer.educ-foot {
+  margin-top: auto;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--edu-muted);
+  border-top: 1px solid var(--edu-line);
+  background: #fff;
+}

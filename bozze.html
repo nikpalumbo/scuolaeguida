@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bozze di stile — Nicola Gison | Melito</title>
+    <link rel="stylesheet" href="/assets/styles/brand.css" />
+    <style>
+      :root {
+        --a: var(--brand-blue, #0a3a7a);
+        --b: #1a1a1a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        color: #222;
+        background: #f4f6f8;
+      }
+      .wrap {
+        max-width: 56rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+      .hub-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1.25rem 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .hub-head .site-logo {
+        width: 100px;
+        height: 100px;
+      }
+      h1 {
+        font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+        margin: 0 0 0.5rem;
+      }
+      p.lead {
+        color: #555;
+        margin: 0;
+        max-width: 44rem;
+      }
+      p.nav-lead {
+        margin: 0.75rem 0 1.5rem;
+      }
+      .back-home {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+      .back-home a {
+        color: var(--a);
+        font-weight: 600;
+      }
+      .grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e0e4ea;
+        border-radius: 10px;
+        padding: 1.35rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 12px rgba(10, 58, 120, 0.06);
+      }
+      .card h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.35rem;
+      }
+      .card .style-name {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #888;
+        margin-bottom: 0.4rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+        color: #444;
+        margin: 0 0 1rem;
+        flex: 1;
+      }
+      .card a {
+        display: inline-block;
+        align-self: flex-start;
+        padding: 0.5rem 0.9rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .a1 {
+        --x: var(--a);
+      }
+      .a1 a {
+        background: var(--x);
+      }
+      .a2 {
+        --x: var(--b);
+      }
+      .a2 a {
+        background: var(--x);
+      }
+      .a3 {
+        --x: var(--a);
+      }
+      .a3 a {
+        background: var(--a);
+      }
+      footer {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 2.5rem;
+      }
+      a.nav-edu {
+        color: var(--a);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="italy-stripe" role="presentation" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="back-home"><a href="/">← Torna alla home</a></p>
+      <div class="hub-head">
+        <img
+          class="site-logo"
+          src="/assets/logo.jpg"
+          width="120"
+          height="120"
+          alt="Diamo vita al nostro progetto — Educazione stradale, Nicola Gison, Nuovo CDU, Melito di Napoli"
+        />
+        <div>
+          <h1>Confronta tre bozze di stile (home “tecniche”)</h1>
+          <p class="lead">Versioni sperimentali. La <a href="/">home principale</a> è l’apertura in landing; per altre <strong>varianti di home</strong> vedi
+            <a href="/concetti-landing.html" style="color: var(--a); font-weight: 600">confronta le landing</a>. Le tre schede sotto sono layout “tecnici” (classico / moderno / comunità).</p>
+        </div>
+      </div>
+      <p class="nav-lead">
+        <a class="nav-edu" href="/educazione/elementari.html">Contenuti per le scuole (elementari, medie, superiori) →</a>
+      </p>
+      <div class="grid">
+        <article class="card a1">
+          <span class="style-name">Bozza 1</span>
+          <h2>Classico / istituzionale</h2>
+          <p>Accento blu, carattere a grazie, doppia cornice, impaginazione a colonne.</p>
+          <a href="/classico.html">Apri home classica</a>
+        </article>
+        <article class="card a2">
+          <span class="style-name">Bozza 2</span>
+          <h2>Moderno / audace</h2>
+          <p>Griglia, sans-serif, CTA in evidenza, hero a destra.</p>
+          <a href="/moderno.html">Apri home moderna</a>
+        </article>
+        <article class="card a3">
+          <span class="style-name">Bozza 3</span>
+          <h2>Comunità / caldo</h2>
+          <p>Card morbide, hero a tutta larghezza, fotografia piena.</p>
+          <a href="/comunita.html">Apri home comunità</a>
+        </article>
+      </div>
+      <footer>
+        Contenuto educazione stradale:
+        <a class="nav-edu" href="/educazione/elementari.html">elementari</a> ·
+        <a class="nav-edu" href="/educazione/medie.html">medie</a> ·
+        <a class="nav-edu" href="/educazione/superiori.html">superiori</a>
+      </footer>
+    </div>
+  </body>
+</html>

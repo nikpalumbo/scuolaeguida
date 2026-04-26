@@ -1,0 +1,67 @@
+/* Palette da logo campagna: blu, bianco, nero, tricolore. Foto: ritaglio e “punch” in CSS. */
+:root {
+  --brand-blue: #0a3a7a;
+  --brand-blue-mid: #13509e;
+  --brand-blue-soft: #e8f0f9;
+  --brand-ink: #141414;
+  --brand-italy-green: #009246;
+  --brand-italy-red: #ce2b37;
+  --brand-stone: #c4a35a;
+  --brand-white: #ffffff;
+  --photo-filter: contrast(1.1) saturate(1.12) brightness(0.99);
+  --photo-radius: 10px;
+}
+
+.italy-stripe {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--brand-italy-green) 0%,
+    #f4f4f4 50%,
+    var(--brand-italy-red) 100%
+  );
+}
+
+/* Logo ufficiale: quadrato, niente crop circolare forzato */
+.site-logo {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(10, 58, 120, 0.18);
+  object-fit: cover;
+  background: var(--brand-white);
+}
+
+/* Foto del territorio: verticale → hero orizzontale = crop alto (cielo + landmark) */
+.photo-hero {
+  filter: var(--photo-filter);
+  border-radius: var(--photo-radius);
+}
+
+@media (pointer: fine) and (hover: hover) {
+  .photo-hero:hover {
+    filter: contrast(1.14) saturate(1.16) brightness(1.01);
+  }
+}
+
+/* Striscia educazione: aspect fisso, meno “vuoto” su mobile */
+.photo-strip {
+  filter: var(--photo-filter);
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  object-fit: cover;
+  object-position: center 32%;
+  border-radius: 8px 8px 0 0;
+}
+
+.melito-strip figure:nth-child(1) .photo-strip {
+  object-position: 50% 30%;
+}
+.melito-strip figure:nth-child(2) .photo-strip {
+  object-position: 50% 38%;
+}
+.melito-strip figure:nth-child(3) .photo-strip {
+  object-position: 50% 35%;
+}
