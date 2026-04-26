@@ -5,20 +5,21 @@ Sito statico HTML/CSS, release **v1.0.0**.
 ## Pubblicazione su GitHub
 
 1. Crea un repository vuoto su GitHub (es. `scuolaeguida` o `gison-2025`).
-2. Dalla cartella del progetto:
+2. Dalla cartella del progetto (se non l’hai già fatto qui, salta `init`/`commit`):
 
    ```bash
-   git init
-   git add .
-   git commit -m "Initial release: site v1.0.0"
-   git branch -M main
    git remote add origin https://github.com/TUO_UTENTE/TUO_REPO.git
    git push -u origin main
-   git tag -a v1.0.0 -m "Release v1.0.0 — public site"
+   git push -u origin v1
    git push origin v1.0.0
    ```
 
-3. **GitHub Pages:** *Settings → Pages →* Branch **main**, cartella **/** (root), Salva.  
+   Nel repo è già presente:
+   - branch **main** (principale)
+   - branch **v1** (stesso contenuto, utile se vuoi impostare Pages solo su `v1`)
+   - tag annotato **`v1.0.0`** (release v1)
+
+3. **GitHub Pages:** *Settings → Pages →* scegli branch **main** o **v1**, cartella **/** (root), Salva.  
 4. Dopo qualche minuto il sito sarà su `https://TUO_UTENTE.github.io/TUO_REPO/` **solo se** adatti i percorsi (vedi sotto) **oppure** usi un dominio personalizzato a root.
 
 ## Dominio personalizzato (consigliato)
