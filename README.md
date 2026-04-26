@@ -18,15 +18,23 @@ Sito statico HTML/CSS, release **v1.0.0**.
    - branch **v1** (stesso contenuto, utile se vuoi impostare Pages solo su `v1`)
    - tag annotato **`v1.0.0`** (release v1)
 
-3. **GitHub Pages:** *Settings → Pages →* scegli branch **main** o **v1**, cartella **/** (root), Salva.  
-4. Dopo qualche minuto il sito sarà su `https://TUO_UTENTE.github.io/TUO_REPO/` **solo se** adatti i percorsi (vedi sotto) **oppure** usi un dominio personalizzato a root.
+3. **GitHub Pages:** *Settings → Pages →* branch **main**, cartella **/** (root), Salva.
 
-## Dominio personalizzato (consigliato)
+## Dominio: **scuoleeguida.com**
 
-1. *Settings → Pages → Custom domain:* inserisci il dominio (es. `www.tuodominio.it`).
-2. Segui le istruzioni per i record **DNS** (A/AAAA o CNAME) indicati da GitHub.
-3. Spunta *Enforce HTTPS* quando disponibile.  
-4. I link del sito usano la root del dominio (`/assets/...`, `/educazione/...`) e funzionano senza modifiche.
+Il repo contiene un file `CNAME` con `scuoleeguida.com` (dominio “nudo”, senza `www`).
+
+1. **Su GitHub:** *Settings → Pages → Custom domain* → inserisci `scuoleeguida.com` → *Save*. Attendi il check DNS/HTTPS (minuti, a volte ore).
+2. **Dal pannello DNS** del registrar (dove comprato il dominio), per l’**apex** `scuoleeguida.com` aggiungi **quattro record A** (IPv4) verso i server di GitHub Pages, come in [questa guida ufficiale](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain) — tipicamente:
+   - `185.199.108.153`
+   - `185.199.109.153`
+   - `185.199.110.153`
+   - `185.199.111.153`  
+   (Verifica l’elenco aggiornato nel link: GitHub a volte aggiorna gli IP.)
+3. *Enforce HTTPS* in Pages quando il certificato risulta pronto.
+4. Se invece preferisci solo **`www.scuoleeguida.com`**: nel DNS usa un **CNAME** `www` → `nikpalumbo.github.io` e in *Custom domain* metti `www.scuoleeguida.com`; in quel caso aggiorna anche la riga nel file `CNAME` in repo in modo che coincida (un solo hostname per file).
+
+I path del sito (`/assets/...`, `/educazione/...`) vanno bene con il dominio in root.
 
 ## Se testi senza dominio (solo `user.github.io/nome-repo/`)
 
