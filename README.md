@@ -5,13 +5,12 @@ Sito statico HTML/CSS, release **v1.0.0**.
 ## Pubblicazione su GitHub
 
 1. Crea un repository vuoto su GitHub (es. `scuolaeguida` o `gison-2025`).
-2. Dalla cartella del progetto (se non l’hai già fatto qui, salta `init`/`commit`):
+2. **Repository remoto:** [github.com/nikpalumbo/scuolaeguida](https://github.com/nikpalumbo/scuolaeguida) (già creato; `origin` punta lì).
+
+   Per clonare altrove:
 
    ```bash
-   git remote add origin https://github.com/TUO_UTENTE/TUO_REPO.git
-   git push -u origin main
-   git push -u origin v1
-   git push origin v1.0.0
+   git clone https://github.com/nikpalumbo/scuolaeguida.git
    ```
 
    Nel repo è già presente:
