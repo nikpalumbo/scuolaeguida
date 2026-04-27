@@ -151,6 +151,58 @@ body {
   margin: 0 0 0.85rem;
 }
 
+.educ-h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  color: #0a0a0a;
+}
+
+.edu-illos {
+  margin: 1.5rem 0 2.25rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--edu-line);
+}
+
+.edu-illos-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.9rem;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.edu-illo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.9rem;
+}
+
+.edu-illo {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--edu-line);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-illo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.edu-illo .illo-cap {
+  font-size: 0.8rem;
+  color: var(--edu-muted);
+  padding: 0.45rem 0.55rem 0.55rem;
+  line-height: 1.4;
+  border-top: 1px solid var(--edu-line);
+}
+
 .educ-list {
   margin: 0.5rem 0 0 1.1rem;
   padding: 0;
