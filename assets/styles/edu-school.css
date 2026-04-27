@@ -1,0 +1,282 @@
+/* Pagine materiali scuole: stesso linguaggio visivo della landing (landing.css) + contenuti didattici */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid var(--brand-blue, #0a3a7a);
+}
+
+.land-school-main {
+  max-width: var(--land-max, 72rem);
+  margin: 0 auto;
+  padding: 0 var(--land-pad, clamp(1.25rem, 4vw, 2.5rem)) 3rem;
+}
+
+.land-school-main--narrow {
+  max-width: 45rem;
+}
+
+.land-school-prose {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.land-school-prose .educ-section {
+  margin-bottom: 2rem;
+}
+
+.land-school-prose .educ-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: var(--brand-blue, #0a3a7a);
+}
+
+.land-school-prose p.p-tight {
+  margin: 0 0 0.65rem;
+  font-size: 0.98rem;
+}
+
+.land-school-prose .card-tip {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--brand-blue, #0a3a7a);
+  padding: 1rem 1.1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.land-school-prose .card-tip__p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.land-school-prose .card-tip__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--brand-blue, #0a3a7a);
+}
+
+.land-school-prose .card-tip strong {
+  color: var(--brand-blue, #0a3a7a);
+}
+
+/* Hero varianti */
+.land-hero--school-elem .land-hero__bg img {
+  object-position: center 28%;
+}
+.land-hero--school-medie .land-hero__bg img {
+  object-position: center 32%;
+}
+.land-hero--school-sup .land-hero__bg img {
+  object-position: center 30%;
+}
+
+.land-nav a[aria-current="page"] {
+  color: var(--brand-blue) !important;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Striscia foto territorio */
+.land-school-melito {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1.75rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.land-school-melito figure {
+  margin: 0;
+  flex: 1 1 200px;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 58, 120, 0.1);
+  background: #e8e8e4;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(10, 58, 120, 0.06);
+}
+
+.land-school-melito .strip-img-wrap {
+  position: relative;
+  height: clamp(130px, 24vw, 200px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.land-school-melito img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.land-school-melito .label {
+  display: block;
+  font-size: 0.72rem;
+  color: #5a5a5a;
+  padding: 0.4rem 0.55rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+}
+
+/* Elementari: tanti cartoni, griglia fitta */
+.edu-cartoon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.edu-cartoon-grid figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 58, 120, 0.1);
+  background: #fff;
+  box-shadow: 0 3px 14px rgba(10, 58, 120, 0.07);
+}
+
+.edu-cartoon-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.edu-cartoon-grid figcaption {
+  font-size: 0.72rem;
+  color: #5a5a5a;
+  padding: 0.4rem 0.45rem 0.55rem;
+  line-height: 1.35;
+  border-top: 1px solid #eee;
+}
+
+/* Medie: illustrazioni in colonna unica, molto grandi (lim, cartellone) */
+.edu-illo-grid--medie {
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
+  margin: 1.5rem 0 2rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-illo-grid--medie .edu-illo img {
+  aspect-ratio: 2 / 1;
+  min-height: clamp(200px, 40vw, 320px);
+  object-fit: cover;
+}
+
+.edu-illo-grid--medie .edu-illo {
+  border-radius: 14px;
+  border: 1px solid rgba(10, 58, 120, 0.12);
+  box-shadow: 0 8px 28px rgba(10, 58, 120, 0.1);
+}
+
+.edu-illo-grid--medie .illo-cap {
+  font-size: 0.88rem;
+  padding: 0.55rem 0.65rem 0.65rem;
+}
+
+/* Superiori: foto realistiche, zero stile cartoon */
+.edu-photo-real {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+@media (min-width: 40rem) {
+  .edu-photo-real {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.edu-photo-real figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.edu-photo-real img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.edu-photo-real figcaption {
+  font-size: 0.8rem;
+  color: #4a4a4a;
+  padding: 0.5rem 0.6rem 0.6rem;
+  background: #f0f2f6;
+  border-top: 1px solid #e0e4ea;
+  line-height: 1.4;
+}
+
+.land-school-note {
+  font-size: 0.85rem;
+  color: #5a5a5a;
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+}
+
+.edu-block-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  color: var(--brand-blue, #0a3a7a);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.edu-block-title--spaced {
+  margin-top: 2rem;
+}
+
+/* Illustrazioni (medie): classi base senza educazione.css */
+.edu-illo-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.edu-illo {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 58, 120, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-illo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.edu-illo .illo-cap {
+  font-size: 0.8rem;
+  color: #4a4a4a;
+  padding: 0.45rem 0.55rem 0.55rem;
+  line-height: 1.4;
+  border-top: 1px solid #e8e8e8;
+}

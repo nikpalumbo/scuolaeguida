@@ -65,6 +65,10 @@ body {
   text-decoration: underline;
 }
 
+.educ-fasce {
+  font-size: 0.9rem;
+}
+
 .educ-main {
   flex: 1;
   max-width: 45rem;
@@ -88,6 +92,102 @@ body {
   color: var(--edu-muted);
   font-size: 1.05rem;
   margin: 0;
+}
+
+.edu-age {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--edu-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Tre punti: cosa si può insegnare (per fascia d’età) */
+.edu-prog {
+  margin: 1.75rem 0 2rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--edu-line);
+}
+
+.edu-prog__title {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  color: var(--edu-accent);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.edu-prog__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 34rem) {
+  .edu-prog__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+.edu-prog__card {
+  min-width: 0; /* in griglia evita l’enorme min-content che spezza a capo il testo */
+  background: #fff;
+  border: 1px solid var(--edu-line);
+  border-radius: 12px;
+  padding: 1rem 0.95rem 1.1rem;
+  box-shadow: 0 3px 16px rgba(10, 58, 120, 0.07);
+}
+
+.edu-prog__card .edu-prog__n {
+  display: inline-flex;
+  width: 1.85rem;
+  height: 1.85rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-blue-soft, #e8f0f9);
+  color: var(--edu-accent);
+  font-weight: 800;
+  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  border-radius: 8px;
+  margin-bottom: 0.55rem;
+}
+
+.edu-prog__card h3 {
+  font-size: 0.98rem;
+  margin: 0 0 0.45rem;
+  line-height: 1.3;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+.edu-prog__card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+
+/* Paragrafi corti, respiro visivo */
+.educ-section p.p-tight {
+  margin: 0 0 0.65rem;
+  max-width: 38rem;
+}
+
+.edu-illos--first {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.edu-illo-grid--duo {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.melito-strip--after-prog {
+  margin-top: 0.5rem;
 }
 
 .melito-strip {
@@ -143,7 +243,7 @@ body {
 
 .educ-section h2 {
   font-size: 1.25rem;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   color: #0a0a0a;
 }
 
@@ -221,9 +321,19 @@ body {
   margin: 1rem 0;
 }
 
-.card-tip strong {
+.card-tip__p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Titoletto a capo; il resto dei <strong> resta in linea (non usare block su .card-tip strong) */
+.card-tip__label {
   display: block;
   margin-bottom: 0.35rem;
+  color: var(--edu-accent);
+}
+
+.card-tip strong {
   color: var(--edu-accent);
 }
 

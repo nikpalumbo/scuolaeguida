@@ -373,22 +373,3 @@ a.land-cta--ghost:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
-.land-srv {
-  max-width: 32rem;
-  margin: 0.75rem auto 0;
-  padding: 0.5rem 0.75rem;
-  background: #fff3cd;
-  color: #664d00;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  text-align: left;
-  border: 1px solid #ffe7a0;
-}
-.land-srv code {
-  font-size: 0.78rem;
-  background: rgba(0, 0, 0, 0.06);
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
-}
