@@ -1,4 +1,4 @@
-# Sito campagna — Nicola Gison (Melito di Napoli)
+# Sito campagna — Gison (Melito di Napoli)
 
 Sito statico HTML/CSS, release **v1.0.0**.
 
